@@ -1,5 +1,5 @@
 pipeline {
-  agent { label "linux" }
+  agent { label "jdk-11" }
   options {
     durabilityHint("PERFORMANCE_OPTIMIZED")
     timeout(time: 3, unit: "DAYS")
