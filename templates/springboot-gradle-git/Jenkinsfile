@@ -22,10 +22,9 @@ pipeline {
       }
     }
     stage("PreBuild") {
-      agent { label "jdk8" }
+      agent { label "java8" }
       steps {
         sh "java -version"
-        sh "/usr/local/openjdk-8/bin/java -version"
       }
     }
     stage("Build") {
