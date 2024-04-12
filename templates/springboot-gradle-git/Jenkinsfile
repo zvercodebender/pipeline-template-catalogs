@@ -24,6 +24,7 @@ pipeline {
     stage("PreBuild") {
       agent { label "jdk8" }
       steps {
+        container('java8')
         sh "java -version"
         sh "/usr/local/openjdk-8/bin/java -version"
       }
