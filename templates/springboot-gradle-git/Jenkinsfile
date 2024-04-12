@@ -22,7 +22,6 @@ pipeline {
       }
     }
     stage("PreBuild") {
-      agent { label "java8" }
       steps {
         sh "java -version"
       }
