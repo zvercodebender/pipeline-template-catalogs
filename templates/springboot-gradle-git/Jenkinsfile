@@ -21,6 +21,11 @@ pipeline {
         )
       }
     }
+    stage("PreBuild") {
+      steps {
+        sh "java -version"
+      }
+    }
     stage("Build") {
       steps {
         sh "./gradlew clean build"
