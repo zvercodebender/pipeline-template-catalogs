@@ -23,9 +23,9 @@ pipeline {
     }
     stage("PreBuild") {
       steps {
-        //container('java8') {
+        container('java8') {
           sh "java -version"
-        //}
+        }
       }
     }
     stage("Build") {
