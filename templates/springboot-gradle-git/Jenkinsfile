@@ -23,14 +23,14 @@ pipeline {
     }
     stage("PreBuild") {
       steps {
-        container('maven') {
+        container('java8') {
           sh "java -version"
         }
       }
     }
     stage("Build") {
       steps {
-        container('maven') {
+        container('java8') {
           sh "./gradlew clean build"
         }
       }
