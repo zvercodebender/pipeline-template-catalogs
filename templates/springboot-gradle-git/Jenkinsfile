@@ -22,13 +22,11 @@ pipeline {
       }
     }
     stage("PreBuild") {
-      agent { label "java8" }
       steps {
         sh "java -version"
       }
     }
     stage("Build") {
-      agent { label "java8" }
       steps {
         sh "./gradlew clean build"
       }
