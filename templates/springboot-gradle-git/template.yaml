@@ -1,5 +1,5 @@
 type: pipeline-template
-version: 2
+version: 1
 
 name: Spring Boot Gradle Git Pipeline
 description: Spring Boot Gradle Git Pipeline
