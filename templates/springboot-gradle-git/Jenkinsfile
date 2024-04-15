@@ -1,5 +1,5 @@
 pipeline {
-  agent { label "java8" }
+  agent { label "java11" }
   options {
     durabilityHint("PERFORMANCE_OPTIMIZED")
     timeout(time: 3, unit: "DAYS")
@@ -23,9 +23,9 @@ pipeline {
     }
     stage("PreBuild") {
       steps {
-        container('java8') {
+        //container('java8') {
           sh "java -version"
-        }
+        //}
       }
     }
     stage("Build") {
