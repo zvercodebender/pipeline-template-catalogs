@@ -23,12 +23,16 @@ pipeline {
     }
     stage("PreBuild") {
       steps {
-        sh "java -version"
+        container('maven') {
+          sh "java -version"
+        }
       }
     }
     stage("Build") {
       steps {
-        sh "./gradlew clean build"
+        container('maven') {
+          sh "./gradlew clean build"
+        }
       }
     }
     stage("Security Scan") {
