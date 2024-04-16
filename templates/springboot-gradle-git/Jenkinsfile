@@ -7,7 +7,7 @@ pipeline {
     skipDefaultCheckout true
   }
   environment {
-    SNYK_TOKEN = credentials("training-token")
+    SNYK_TOKEN = "training-token"
   }
   stages {
     stage("Checkout") {
@@ -38,8 +38,7 @@ pipeline {
     stage("Security Scan") {
       steps {
         sh '''
-          echo " auth SNYK_TOKEN"
-          echo " snyk test --all-sub-projects"
+          echo "scanning...."
         '''
       }
     }    
